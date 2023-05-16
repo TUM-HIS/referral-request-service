@@ -116,6 +116,19 @@ class ReferralRequestService
                 [
                     "reference" => "Provenance/123"
                 ]
+            ],
+            "locationCode" => [
+                [
+                    "coding" => [
+                        [
+                            "system" => "http://example.com/reasons",
+                            "code" => "symptoms",
+                            "display" => "Symptoms"
+                        ]
+                    ],
+                    "text" => "Patient is experiencing flu-like symptoms"
+                ]
+
             ]
         ];
 
