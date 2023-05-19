@@ -30,6 +30,9 @@ class ReferralRequestService
                     "value" => "12345"
                 ]
             ],
+            "subject" => [
+                "reference" => "Patient/123"
+            ],
             "basedOn" => [
                 [
                     "reference" => "CarePlan/123"
@@ -58,9 +61,6 @@ class ReferralRequestService
                     ]
                 ],
                 "text" => "Blood Test"
-            ],
-            "subject" => [
-                "reference" => "Patient/123"
             ],
             "encounter" => [
                 "reference" => "Encounter/123"
@@ -121,9 +121,9 @@ class ReferralRequestService
                 [
                     "coding" => [
                         [
-                            "system" => "http://example.com/reasons",
-                            "code" => "symptoms",
-                            "display" => "Symptoms"
+                            "system" => "http://kmhfl.com/location",
+                            "code" => "32",
+                            "display" => "tudor"
                         ]
                     ],
                     "text" => "Patient is experiencing flu-like symptoms"

@@ -19,5 +19,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post("/referralRequest", [ReferralController::class, 'pushReferralRequest']);
+Route::group(['prefix' => 'referral'], function () {
+
+
+    Route::get('/sendRequest', [ReferralController::class, 'pushReferralRequest']);
+    Route::post('/serviceRequest', [ReferralController::class, 'receiveReferralRequest']);
+    Route::get('/index', [ReferralController::class, 'index']);
+
+
+
+
+});
+
+//Route::post("/referralRequest", [ReferralController::class, 'pushReferralRequest']);
+
+
 
