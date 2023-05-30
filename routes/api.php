@@ -25,9 +25,7 @@ Route::group(['prefix' => 'referral'], function () {
     Route::get('/sendRequest', [ReferralController::class, 'pushReferralRequest']);
     Route::post('/serviceRequest', [ReferralController::class, 'receiveReferralRequest']);
     Route::get('/index', [ReferralController::class, 'index']);
-
-
-
+    
 
 });
 
