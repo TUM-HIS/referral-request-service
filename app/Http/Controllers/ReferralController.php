@@ -32,13 +32,15 @@ class ReferralController extends Controller
 
         $receivedRequest = $request->json()->all();
 
-        $returnResponse = json_decode(json_encode($receivedRequest), true);
+        $returnResponse = $receivedRequest;
 
-        $returnResponse['id'] = Str::uuid()->toString();
+        //$returnResponse['id'] = Str::uuid()->toString();
+
+        $returnResponse['referralId'] = Str::uuid()->toString();
 
 
         return response()->json([
-            'id' => $returnResponse['id']
+            'referralRes' => $returnResponse
         ], 201);
 
 
